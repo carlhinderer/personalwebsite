@@ -1,15 +1,22 @@
-- Experience with the C, C++, Java, C#, Ruby, and Python programming languages
-- Experience building RESTful web applications with the Rails platform
-- Experience with Rails Test-Driven Development using RSpec
-- Experience with Rails Behavior-Driven Development using Cucumber and Capybara
-- Experience with JavaScript, CoffeeScript, Nodejs, JQuery, Ember, Backbone, and Mustache
-- Experience with CSS, SASS, and libraries like Bootstrap
-- Experience with SQL databases, including PostgreSQL, MySQL, and MS Sql Server
-- Experience with NoSQL databases, including CouchDB, MongoDB, Riak, and HBase
-- Experience with  traditional and agile software methodologies
-- Experience using the Git and Subversion version control systems
-- Experience building ASP MVC web applications
-- Experience with .NET technologies, including WPF, Powershell, and Wix
-- Knowledge of basic audio and video programming
-- Knowledge of basic network programming
-- Knowldege of basic Linux and Windows system administration
+software_qualifications:  
+  - Experience with the C, C++, Java, C#, Ruby, and Python programming languages
+  - Experience with JavaScript, CoffeeScript, Nodejs, JQuery, Ember, Backbone, and Mustache
+  - Experience with CSS, SASS, Bootstrap, and responsive web design
+  - Experience with SQL databases, including PostgreSQL, MySQL, and MS Sql Server
+  - Experience with NoSQL databases, including CouchDB, MongoDB, Riak, and HBase
+  - Experience with  traditional and agile software methodologies
+  - Experience using the Git and Subversion version control systems
+rails_qualifications:
+  - Experience building RESTful web applications with the Rails platform
+  - Experience with Rails Test-Driven Development using RSpec
+  - Experience with Rails Behavior-Driven Development using Cucumber and Capybara
+microsoft_qualifications:
+  - Experience building ASP MVC web applications
+  - Experience with building Windows Presentation Foundation applications 
+  - Powershell, and Wix
+other_qualifications:
+  - Experience with PHP LAMP stack websites
+  - Knowledge of basic audio and video programming
+  - Knowledge of basic network programming
+  - Knowldege of basic Linux and Windows system administration
+  - Some knowledge of Puppet scripting
