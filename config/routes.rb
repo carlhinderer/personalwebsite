@@ -1,6 +1,10 @@
-Personalwebsite::Application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+Personalwebsite::Application.routes.draw do 
+  
+  root 'posts#index'
+  get 'posts/index'
+  get 'posts/:id' => 'posts#show'
+
+  # get 'post/index' => 'post#index'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
