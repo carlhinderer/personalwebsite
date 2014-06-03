@@ -1,9 +1,9 @@
 Personalwebsite::Application.routes.draw do 
   
   root 'posts#index'
-  # get 'posts/index'
-  # get 'posts/:id' => 'posts#show'
-  # post 'comments/create'
+
+  get 'posts/programming' => 'posts#index_programming'
+  get 'posts/personal' => 'posts#index_personal'
 
   resources :posts do
     resources :comments
