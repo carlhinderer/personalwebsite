@@ -3,6 +3,6 @@
   %hr
   .title= @post.title
   %hr
-  .body= @post.body
+  .body= find_and_preserve markdown_with_pygmentize(@post.body)
   %hr
   = render :partial => '/comments/post_comments'

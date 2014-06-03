@@ -17,8 +17,12 @@ gem 'therubyracer', platforms: :ruby
 
 gem 'jquery-rails'
 
+# Use friendly_id to generate SEO-friendly URLs for blog posts
 gem 'friendly_id'
+
+# Use redcarpet and pygmentize for creating blog posts with code embedded
 gem 'redcarpet'
+gem 'pygmentize'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
