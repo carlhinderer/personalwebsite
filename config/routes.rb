@@ -9,6 +9,8 @@ Personalwebsite::Application.routes.draw do
     resources :comments
   end
 
+  resources :tags, only: [:index, :new, :create, :destroy]
+
   # get 'post/index' => 'post#index'
 
   # You can have the root of your site routed with "root"

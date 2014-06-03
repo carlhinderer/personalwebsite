@@ -1,0 +1,8 @@
+%h2 Create New Tag
+
+= form_for(@tag, :url => tags_path) do |f|
+  %p
+    = f.label :name
+    = f.text_field :name
+  %p
+    = f.submit 'Save Tag'

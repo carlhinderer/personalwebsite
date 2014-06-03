@@ -1,0 +1,16 @@
+%h2 All Tags
+
+%table#tags
+  %thead
+    %tr
+      %th Name
+      %th Delete
+  %tbody
+    - @tags.each do |tag|
+      %tr
+        %td= tag.name
+        %td= link_to('Delete', tag_path(tag), :method => :delete)
+
+
+= link_to 'Add new tag', new_tag_path
+
