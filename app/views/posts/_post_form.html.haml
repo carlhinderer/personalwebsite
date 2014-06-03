@@ -1,0 +1,29 @@
+- unless @post.errors.empty?
+  #warning
+    Errors prevented this post from being #{controller.action_name}d.
+    %ul
+      - @post.errors.full_messages.each do |error|
+        %li= error
+
+%p
+  = label :post, :title, 'Title'
+  = text_field :post, :title, :size => 70
+
+%p
+  = label :post, :body, 'Body'
+  = text_area :post, :body, :cols => 100, :rows => 30
+
+%p
+  = label :post, :posted, 'Date Posted'
+  = date_select :post, :posted
+
+%p
+  = label :post, :category_id, 'Category'
+  = select :post, :category_id, [['Programming', 1], ['Personal', 2]]
+
+%p
+  = label :post, :tags, 'Tags'
+  - if @tags
+    - @tags.each do |tag|
+      = tag.name
+

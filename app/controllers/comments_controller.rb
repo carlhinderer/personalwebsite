@@ -1,17 +1,24 @@
 class CommentsController < ApplicationController
-  before_filter :has_post, :only => [:new, :create]
+  before_filter :has_post
 
   def new
     @comment = @post.comments.build
   end
 
   def create
-    @comment = Comment.new(comment_params)
+    @comment = Comment.new comment_params
     @comment.posted = Time.now
     if !(@post.comments << @comment) 
       flash[:warning] = 'A problem was encountered. Unable to save comment.'
     end
     redirect_to post_path(@post.id)
+  end
+
+  def destroy
+    @comment = Comment.find params[:id]
+    @comment.destroy
+    flash[:notice] = "Comment successfully destroyed."
+    redirect_to post_path(@post)
   end
 
   protected

@@ -1,0 +1,5 @@
+%h2 Create New Post
+
+= form_tag posts_path, :method => :post do
+  = render :partial => 'post_form'
+  = submit_tag 'Create Post'

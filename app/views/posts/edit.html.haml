@@ -1,0 +1,5 @@
+%h2 Edit Post
+
+= form_tag post_path(@post), :method => :put do
+  = render :partial => 'post_form'
+  = submit_tag 'Save Changes'

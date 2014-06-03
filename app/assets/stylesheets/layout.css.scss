@@ -1,0 +1,18 @@
+.horizontal_list_style { 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li { display: inline; 
+    a { text-decoration: none; }
+  }
+}
+
+ul.social_media_links {
+  @extend .horizontal_list_style;
+}
+
+ul.navigation_bar {
+  @extend .horizontal_list_style;
+}
+
+
