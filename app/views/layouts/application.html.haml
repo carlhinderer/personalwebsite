@@ -8,30 +8,20 @@
     = csrf_meta_tags
 
   %body
-    -# Title
-    %h1= link_to("Carl Hinderer's Blog", root_path)
-
-    -# Links
-    %ul.social_media_links
-      %li= link_to("Twitter", 'https://twitter.com/carlhinderer')
-      %li= link_to("GitHub", 'https://github.com/carlhinderer')
-      %li= link_to("LinkedIn", 'http://www.linkedin.com/in/carlhinderer')
-      %li= link_to("Facebook", 'https://www.facebook.com/carl.hinderer.16')
-      %li= link_to("Google+", 'https://plus.google.com/110122098344025416472/about')
-
-    -# Navigation
-    %ul.navigation_bar
-      %li= link_to("Programming Blog", posts_programming_path)
-      %li= link_to("Personal Blog", posts_personal_path)
-      %li= link_to("Resume", root_path)
-      %li= link_to("Contact", root_path)
+    .container
+      = render :partial => 'navigation_bar'
     
-    -# Flash Notice/Warning
-    - if flash[:notice]
-      #notice.message= flash[:notice]
-    - elsif flash[:warning]
-      #warning.message= flash[:warning]
+      - if flash[:notice]
+        #notice.message= flash[:notice]
+      - elsif flash[:warning]
+        #warning.message= flash[:warning]
 
-    -# Main Content
-    #main_content
-      =yield
+      %div.row
+        %div.span2
+        %div.span8
+          =yield
+          %p Footer: Copyright, also this site uses Glyphicons
+        %div.span2
+
+
+
