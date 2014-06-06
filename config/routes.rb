@@ -5,6 +5,8 @@ Personalwebsite::Application.routes.draw do
   get 'posts/programming' => 'posts#index_programming'
   get 'posts/personal' => 'posts#index_personal'
 
+  get 'admin' => 'admin#index' 
+
   resources :posts do
     resources :comments
   end
