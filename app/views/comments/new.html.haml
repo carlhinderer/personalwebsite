@@ -1,14 +1,19 @@
-%h1 #{@post.title}
+%h3.new_comment_header Add comment for '#{@post.title}'
 
 = form_for(@comment, :url => post_comments_path(@post)) do |f|
-  %p
+  .form-group
     = f.label :author
+    %br
     = f.text_field :author
-  %p
+  .form-group
     = f.label :author_website
+    %br
     = f.text_field :author_website
-  %p
-    = f.label :body
+  .form-group
+    = f.label :body, 'Comment'
+    %br
     = f.text_area :body, :size => '40x10'
-  %p
+  .form-group
     = f.submit 'Add Comment'
+  .form-group
+    = button_to 'Cancel', post_path(@post)

@@ -1,5 +1,5 @@
 %div[post]
   .post_summary_date_tags Posted #{formatted_post_date(post.posted)} on #{formatted_tag_list(post.tags)}
   .post_summary_title= link_to("#{post.title}", "/posts/#{post.id}")
-  .post_summary_body= post.body
+  .post_summary_body= truncated_post_body(post.body)
   %hr.post-summary-separator

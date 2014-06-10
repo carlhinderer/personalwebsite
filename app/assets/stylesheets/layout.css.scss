@@ -1,22 +1,51 @@
-.social-media-link { 
-  padding: 10px 10px 0px 0px !important;
+/* Layout */
+body, html { 
+  height: 100%;
 }
 
-.post-summary-separator {
-  color: #009999;
-  border-color: #009999;
-  background-color: #009999;
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -50px;
+  padding-bottom: 150px;
 }
 
-#posts {
-  padding-top: 100px;
+#push, #footer {
+  height: 50px;
 }
 
-.footer {
-  padding-top: 150px;
+
+/* Navigation */
+.navbar_option {
+  margin-left: 20px;
 }
 
+.navbar-brand {
+  font-size: 2em;
+}
+
+.social_media_link { 
+  padding: 15px 10px 0px 0px !important;
+  :hover { background-color: #ad1d28; }
+}
+
+
+/* Administration */
 .admin_table {
   margin: 50px 0px;
   th, td { padding: 5px 10px; }
+}
+
+
+/* Message Bar */
+#notice, #warning {
+  background: yellow;
+  margin: 1em 0;
+  padding: 4px;
+}
+
+#notice.message, #warning.message {
+  color: red;
+  text-align: center;
 }

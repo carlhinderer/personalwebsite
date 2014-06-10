@@ -1,2 +1,5 @@
 #posts
-  = render :partial => 'post_summary', :collection => @posts, :as => :post
+  -if @posts.any?
+    = render :partial => 'post_summary', :collection => @posts, :as => :post
+  -else
+    %p= 'Posts coming soon.'

@@ -2,33 +2,23 @@
 
 %html
   %head
-    %title Carl Hinderer's Blog
+    %title #{@title || 'Carl Hinderer\'s Blog'}
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'application'
     = csrf_meta_tags
 
   %body
-    .container
-      = render :partial => 'navigation_bar'
-    
-      - if flash[:notice]
-        #notice.message= flash[:notice]
-      - elsif flash[:warning]
-        #warning.message= flash[:warning]
-
-      .row
-        .col-md-2
-        .col-md-8
-          =yield
-        .col-md-2
-
-    .footer
+    #wrap
       .container
+        = render :partial => 'navigation_bar'
+        = render :partial => 'message_bar'
         .row
-          .col-md-1
-          .col-md-10  
-            %p Copyright, also this site uses Glyphicons
-          .col-md-1
-
-
-
+          .col-md-2
+          .col-md-8
+            =yield
+          .col-md-2
+      #push
+        
+    #footer
+      .container
+        = render :partial => 'footer'

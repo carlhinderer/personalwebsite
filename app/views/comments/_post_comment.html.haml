@@ -2,7 +2,6 @@
   .author= comment_author_with_website(comment)
   .body= comment.body
   .time= "Posted at #{comment.posted}"
-  .delete_link= link_to 'Delete', post_comment_url(comment.post_id, comment), 
-    :method => :delete, 
-    :confirm => 'Are you sure you want to delete the comment?'
-  %hr
+  -if admin_signed_in?
+    .delete_link= link_to 'Delete', post_comment_url(comment.post_id, comment), 
+      :method => :delete, :confirm => 'Are you sure you want to delete the comment?'

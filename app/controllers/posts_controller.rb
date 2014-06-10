@@ -51,7 +51,7 @@ class PostsController < ApplicationController
     @post = Post.find params[:id]
     @post.destroy
     flash[:notice] = "Post '#{@post.title}' was successfuly destroyed."
-    redirect_to admins_path
+    redirect_to manage_path
   end
 
   private

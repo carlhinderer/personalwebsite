@@ -1,8 +1,6 @@
+- @title = @post.title
 #post
   .date_tags Posted #{formatted_post_date(@post.posted)} on #{formatted_tag_list(@post.tags)} 
-  %hr
   .title= @post.title
-  %hr
   .body= find_and_preserve markdown_with_pygmentize(@post.body)
-  %hr
   = render :partial => '/comments/post_comments'
