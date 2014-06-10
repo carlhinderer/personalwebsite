@@ -4,7 +4,7 @@ module PostsHelper
   end
 
   def formatted_tag_list(tags)
-    tags.map { |tag| tag.name }
-        .join(", ")
+    tags.map { |tag| link_to tag.name, "/posts/tag/#{tag.name}" }
+        .join(", ").html_safe
   end
 end

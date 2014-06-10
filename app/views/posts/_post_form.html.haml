@@ -5,26 +5,26 @@
       - @post.errors.full_messages.each do |error|
         %li= error
 
-%p
+.form-group
   = label :post, :title, 'Title'
-  = text_field :post, :title, :size => 70
-
-%p
+  = text_field :post, :title, :size => 70, class: 'form-control'
+.form-group
   = label :post, :body, 'Body'
-%p
-  = text_area :post, :body, :cols => 100, :rows => 30
-
-%p
+  = text_area :post, :body, :cols => 100, :rows => 30, class: 'form-control'
+.form-group
   = label :post, :posted, 'Date Posted'
+  %br
   = date_select :post, :posted
-
-%p
+.form-group
   = label :post, :category_id, 'Category'
+  %br
   = select :post, :category_id, [['Programming', 1], ['Personal', 2]]
-
-%p
+.form-group
   = label :post, :tags, 'Tags'
   - if @tags
     - @tags.each do |tag|
-      = tag.name
-
+      .checkbox
+        = tag.name
+        = hidden_field_tag "post[tag_ids][]"
+        = check_box_tag "post[tag_ids][]", tag.id, @post.tags.include?(tag), 
+          :id => "post_tag_ids_#{tag.id}"

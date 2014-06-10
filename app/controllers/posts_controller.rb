@@ -1,8 +1,16 @@
 class PostsController < ApplicationController
-  before_action :authenticate_admin!, :only => [:new, :create, :edit, :update, :destroy]
+  #before_action :authenticate_admin!, :only => [:new, :create, :edit, :update, :destroy]
 
   def index
-    @posts = Post.order(created_at: :desc)
+    if params[:category_or_tag] == 'programming'
+      @posts = Post.joins(:category).where(:categories => {:name => 'Programming'}).order(created_at: :desc)
+    elsif params[:category_or_tag] == 'personal'
+      @posts = Post.joins(:category).where(:categories => {:name => 'Personal'}).order(created_at: :desc)
+    elsif !params[:category_or_tag]
+      @posts = Post.order(created_at: :desc)
+    else
+      @posts = Post.joins(:tags).where(:tags => {:name => params[:category_or_tag]}).order(created_at: :desc)
+    end
   end
 
   def show
@@ -16,7 +24,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-     if @post.save
+    if @post.save
       flash[:notice] = "Post '#{@post.title}' was successfully saved."
       redirect_to root_path
     else
@@ -26,6 +34,7 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find params[:id]
+    @tags = Tag.all
   end
 
   def update
@@ -42,19 +51,11 @@ class PostsController < ApplicationController
     @post = Post.find params[:id]
     @post.destroy
     flash[:notice] = "Post '#{@post.title}' was successfuly destroyed."
-    redirect_to root_path
-  end
-
-  def index_programming
-    @posts = Post.joins(:category).where(:categories => {:name => 'Programming'}).order(created_at: :desc)
-  end
-
-  def index_personal
-    @posts = Post.joins(:category).where(:categories => {:name => 'Personal'}).order(created_at: :desc)
+    redirect_to admins_path
   end
 
   private
   def post_params
-    params.require(:post).permit(:title, :body, :posted, :category_id)
+    params.require(:post).permit(:title, :body, :posted, :category_id, tag_ids: [])
   end
 end

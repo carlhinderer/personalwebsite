@@ -3,8 +3,8 @@
     .collapse.navbar-collapse
       %ul.nav.navbar-nav
         %li= link_to "Carl Hinderer's Blog", root_url, {class: 'navbar-brand'}
-        %li= link_to 'Programming Blog', posts_programming_path
-        %li= link_to 'Personal Blog', posts_personal_path
+        %li= link_to 'Programming Blog', '/posts/category/programming'
+        %li= link_to 'Personal Blog', '/posts/category/personal'
         %li= link_to 'Resume', root_path
         %li= link_to 'Contact', root_path
       %ul.nav.navbar-nav.navbar-right

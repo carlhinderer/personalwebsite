@@ -1,16 +1,16 @@
-%h2 All Tags
+%h3 Manage Tags
 
-%table#tags
-  %thead
+%table.admin_table
+  %tr
+    %th Name
+    %th Delete
+  - @tags.each do |tag|
     %tr
-      %th Name
-      %th Delete
-  %tbody
-    - @tags.each do |tag|
-      %tr
-        %td= tag.name
-        %td= link_to('Delete', tag_path(tag), :method => :delete)
+      %td= tag.name
+      %td= link_to('Delete', tag_path(tag), :method => :delete)
 
-
-= link_to 'Add new tag', new_tag_path
+%h4 Add New Tag
+= form_for :tag, :url => {:controller => 'tags', :action => 'create'} do |f|
+  = f.text_field :name
+  = f.submit 'Add Tag'
 
