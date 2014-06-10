@@ -1,5 +1,6 @@
 Personalwebsite::Application.routes.draw do 
   
+  devise_for :admins, :skip => :registrations
   root 'posts#index'
 
   get 'posts/programming' => 'posts#index_programming'

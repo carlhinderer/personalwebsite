@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
   before_filter :has_post
+  before_action :authenticate_admin!, :only =>[:destroy]
 
   def new
     @comment = @post.comments.build
