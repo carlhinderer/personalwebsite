@@ -23,8 +23,8 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use bootstrap for styles
 gem 'bootstrap-sass'
 
+# Javascript
 gem 'therubyracer', platforms: :ruby
-
 gem 'jquery-rails'
 
 # Use friendly_id to generate SEO-friendly URLs for blog posts
@@ -45,12 +45,27 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# RSpec testing
+# Testing
 group :development, :test do
   gem 'rspec-rails'
-  gem 'ZenTest'
   gem 'factory_girl_rails'
   gem 'simplecov', :require => false
+end
+
+group :test do
+  gem 'shoulda-matchers'
+  gem 'guard-rspec'
+  gem 'guard-cucumber'
+  gem 'launchy'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+  gem 'selenium-webdriver'
+end
+
+# Code Quality Testing
+group :development do
+  gem 'reek'
+  gem 'metric_fu'
 end
 
 # Use ActiveModel has_secure_password
