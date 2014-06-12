@@ -7,4 +7,7 @@ class Post < ActiveRecord::Base
   validates :body, presence: true
   validates :posted, presence: true
   validates :category_id, presence: true
+
+  extend FriendlyId
+  friendly_id :title, :use => :slugged
 end

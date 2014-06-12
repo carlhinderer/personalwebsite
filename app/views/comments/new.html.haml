@@ -15,5 +15,6 @@
     = f.text_area :body, :size => '40x10'
   .form-group
     = f.submit 'Add Comment'
-  .form-group
-    = button_to 'Cancel', post_path(@post)
+
+.form-group
+  = button_to 'Cancel', post_path(@post), :method => :get

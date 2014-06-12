@@ -24,7 +24,7 @@ class CommentsController < ApplicationController
 
   protected
   def has_post
-    unless (@post = Post.find(params[:post_id]))
+    unless (@post = Post.friendly.find(params[:post_id]))
       flash[:warning] = 'Comments can only be applied to existing blog posts.'
       redirect_to root_path
     end
