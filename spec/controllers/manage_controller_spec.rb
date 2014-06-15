@@ -1,0 +1,2 @@
+describe ManageController do
+end

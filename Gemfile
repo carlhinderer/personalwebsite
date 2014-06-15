@@ -50,6 +50,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'simplecov', :require => false
+  gem 'faker'
 end
 
 group :test do
@@ -67,6 +68,9 @@ group :development do
   gem 'reek'
   gem 'metric_fu'
 end
+
+# Use railroady for model visualization
+gem 'railroady', :groups => [:development, :test]
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
