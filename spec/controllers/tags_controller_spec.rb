@@ -1,4 +1,5 @@
 describe TagsController do
+  login_admin
 
   describe "get #index" do
     it "responds successfully with an HTTP 200 status code" do

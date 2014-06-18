@@ -20,7 +20,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find params[:id]
     @comment.destroy
     flash[:notice] = "Comment successfully destroyed."
-    redirect_to post_path(@post)
+    redirect_to post_path(@post.id)
   end
 
 
