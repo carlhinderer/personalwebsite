@@ -7,6 +7,9 @@ gem 'rails', '4.0.3'
 gem 'sqlite3', :groups => [:development, :test]
 gem 'pg', :group => :production
 
+# Use Heroku 12-Factor so that assets get served correctly
+gem 'rails_12factor', :group => :production
+
 # Use figaro for environment variables
 gem 'figaro'
 
