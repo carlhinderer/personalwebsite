@@ -1,0 +1,46 @@
+.NET_software_developer:
+  company: 'Uptivity, Inc.'
+  dates: 'September 2012 - January 2014'
+  location: 'Columbus, OH'
+  duties:
+    - Developed and maintained C# web applications
+    - Developed and maintained C# desktop applications
+    - Developed and maintained Windows services
+    - Developed and maintained Windows installers
+student_computer_centers_supervisor:
+  company: 'The Ohio State University'
+  dates: 'September 2009 - April 2012'
+  location: 'Columbus, OH'
+  duties:
+    - Maintained computing sites campus-wide
+    - Managed computing resources and resolved technical issues
+    - Supervised employees and customer service
+associate:
+  company: 'Panera Bread'
+  dates: 'May 2008 - May 2009'
+  location: 'Columbus, OH'
+  duties:
+    - Made delicious sandwiches and other food products
+    - Maintained customer service of all kinds
+sr._financial_services_rep_/_credit_analyst:
+  company: 'Verizon Wireless'
+  dates: 'July 2005 - January 2008'
+  location: 'Columbus, OH'
+  duties:
+    - Performed user acceptance testing of new systems
+    - Analyzed credit worthiness of businesses and individuals
+    - Offered customer and financial services support
+shift_supervisor:
+  company: 'Starbucks Coffee Company'
+  dates: 'October 2002 - July 2005'
+  location: 'Columbus, OH'
+  duties:
+    - Managed overall operations during supervisory shifts
+    - Managed personnel, customer service, banking, and inventory
+assistant_manager:
+  company: 'Brookstone'
+  dates: 'October 1999 - September 2002'
+  location: 'Columbus, OH'
+  duties:
+    - Managed retail environment, including deployment of personnel, banking, loss prevention, and 
+      inventory tracking

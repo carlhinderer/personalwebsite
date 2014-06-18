@@ -1,0 +1,7 @@
+- @employment_history.each do |job_title, job_details|
+  %p.resume_category_title= job_title.titleize
+  %p.resume_institution= job_details["company"]
+  %p.resume_dates #{job_details["dates"]} | #{job_details["location"]}
+  %ul.resume_category_list
+    - job_details["duties"].each do |duty|
+      %li= duty

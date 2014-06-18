@@ -1,0 +1,5 @@
+- @programming_experience.each do |category, qualifications|
+  %p.resume_category_title= category.titleize
+  %ul.resume_category_list
+    - qualifications.each do |qualification|
+      %li= qualification

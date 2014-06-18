@@ -1,0 +1,5 @@
+- @education.each do |degree, degree_details|
+  %p.resume_category_title= degree
+  %p.resume_institution= degree_details["school"]
+  %p= "#{degree_details["dates"]} | #{degree_details["location"]}"
+  %ul.resume_category_list

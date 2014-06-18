@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  #before_action :authenticate_admin!, :only => [:new, :create, :edit, :update, :destroy]
+  before_action :authenticate_admin!, :only => [:new, :create, :edit, :update, :destroy]
 
   def index
     if params[:category_or_tag] == 'programming'

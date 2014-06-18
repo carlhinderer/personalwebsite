@@ -1,1 +1,9 @@
-Contact me at carl.hinderer4@gmail.com
+#contact_info
+  %p Contact me at #{mail_to 'carl.hinderer4@gmail.com', 'carl.hinderer4@gmail.com'}
+  %p Or connect with me at one of these fine social networking sites:
+  %ul.contact_links
+    %li= link_to image_tag('contact/Twitter_logo_blue.png'), twitter_link
+    %li= link_to image_tag('contact/Octocat.png'), github_link
+    %li= link_to image_tag('contact/LinkedIn-InBug.png'), linkedin_link
+    %li= link_to image_tag('contact/FB-50.png'), facebook_link
+    %li= link_to image_tag('contact/g+64.png'), googleplus_link

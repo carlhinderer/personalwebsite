@@ -14,26 +14,26 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-06-14T23:51:26-04:00">2014-06-14T23:51:26-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-06-17T15:17:38-04:00">2014-06-17T15:17:38-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">92.45%</span></span>
+    (<span class="covered_percent"><span class="green">92.73%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.34
+         1.35
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>41</b> files in total.
-    <b>384</b> relevant lines. 
-    <span class="green"><b>355</b> lines covered</span> and
+    <b>44</b> files in total.
+    <b>399</b> relevant lines. 
+    <span class="green"><b>370</b> lines covered</span> and
     <span class="red"><b>29</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -182,10 +182,10 @@
       
       <tr>
         <td class="strong"><a href="#a2ddd93d0450da617c21093789c5d0acdd59ac14" class="src_link" title="app/models/comment.rb">app/models/comment.rb</a></td>
-        <td class="yellow strong">87.5 %</td>
-        <td>12</td>
+        <td class="yellow strong">88.89 %</td>
+        <td>13</td>
+        <td>9</td>
         <td>8</td>
-        <td>7</td>
         <td>1</td>
         <td>0.9</td>
       </tr>
@@ -448,6 +448,36 @@
         <td>5</td>
         <td>0</td>
         <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#6a7454f4fe453a44769a73d055ef9762577b066f" class="src_link" title="spec/models/comment_spec.rb">spec/models/comment_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>9</td>
+        <td>6</td>
+        <td>6</td>
+        <td>0</td>
+        <td>1.8</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#d7044ff50de5ab58e54c998dd822da3234756734" class="src_link" title="spec/models/post_spec.rb">spec/models/post_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>6</td>
+        <td>5</td>
+        <td>5</td>
+        <td>0</td>
+        <td>1.8</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#e205bf25dd06ecf12058bf4415deca3d7196a96d" class="src_link" title="spec/models/tag_spec.rb">spec/models/tag_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>4</td>
+        <td>3</td>
+        <td>3</td>
+        <td>0</td>
+        <td>1.7</td>
       </tr>
       
       <tr>
@@ -1901,10 +1931,10 @@
         <div class="source_table" id="a2ddd93d0450da617c21093789c5d0acdd59ac14">
   <div class="header">
     <h3>app/models/comment.rb</h3>
-    <h4><span class="yellow">87.5 %</span> covered</h4>
+    <h4><span class="yellow">88.89 %</span> covered</h4>
     <div>
-      <b>8</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
+      <b>9</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
       <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
@@ -1927,58 +1957,64 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">  validates :author, presence: true</code>
+          <code class="ruby">  validates :author, :presence =&gt; true, length: {:maximum =&gt; 40}</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  validates :body, presence: true</code>
+          <code class="ruby">  validates :author_website, :length =&gt; {:maximum =&gt; 40}</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  validates :body, :presence =&gt; true, :length =&gt; {:maximum =&gt; 400}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
+        <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
           <code class="ruby">  before_create :set_posted_datetime</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
+        <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
           <code class="ruby">  private</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
+        <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
           <code class="ruby">  def set_posted_datetime</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="10">
+        <li class="missed" data-hits="0" data-linenumber="11">
           
           
           <code class="ruby">    self.posted = Time.now</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">end</code>
@@ -7067,6 +7103,174 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="6a7454f4fe453a44769a73d055ef9762577b066f">
+  <div class="header">
+    <h3>spec/models/comment_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>6</b> relevant lines. 
+      <span class="green"><b>6</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe Comment do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="2">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { should validate_presence_of(:author) }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="3">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { should ensure_length_of(:author).is_at_most(40) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="5">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { should ensure_length_of(:author_website).is_at_most(40) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="7">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { should validate_presence_of(:body) }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="8">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { should ensure_length_of(:body).is_at_most(400) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="d7044ff50de5ab58e54c998dd822da3234756734">
+  <div class="header">
+    <h3>spec/models/post_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>5</b> relevant lines. 
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe Post do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="2">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { should validate_presence_of(:title) }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="3">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { should validate_presence_of(:body) }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="4">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { should validate_presence_of(:posted) }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="5">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { should validate_presence_of(:category_id) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="e205bf25dd06ecf12058bf4415deca3d7196a96d">
+  <div class="header">
+    <h3>spec/models/tag_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe Tag do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="2">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { should validate_presence_of(:name) }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="3">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { should validate_uniqueness_of(:name) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
           
           
           <code class="ruby">end</code>

@@ -1,0 +1,8 @@
+.panel-heading
+  %h4.panel-title
+    = link_to panel_title, "#collapse#{panel_number}", 
+      'data-toggle' => 'collapse', 
+      'data-parent' => '#accordion'
+.panel-collapse.collapse{id: "collapse#{panel_number}"}
+  .panel-body
+    = panel_content

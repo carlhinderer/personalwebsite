@@ -1,22 +1,25 @@
-software_qualifications:  
+software_experience:  
   - Experience with the C, C++, Java, C#, Ruby, and Python programming languages
-  - Experience with JavaScript, CoffeeScript, Nodejs, JQuery, Ember, Backbone, and Mustache
+  - Experience with JavaScript, CoffeeScript, Nodejs, JQuery, Ember, Backbone, Mustache, and Jasmine
   - Experience with CSS, SASS, Bootstrap, and responsive web design
   - Experience with SQL databases, including PostgreSQL, MySQL, and MS Sql Server
   - Experience with NoSQL databases, including CouchDB, MongoDB, Riak, and HBase
-  - Experience with  traditional and agile software methodologies
+  - Experience with traditional and agile software methodologies
   - Experience using the Git and Subversion version control systems
-rails_qualifications:
+rails_experience:
   - Experience building RESTful web applications with the Rails platform
   - Experience with Rails Test-Driven Development using RSpec
-  - Experience with Rails Behavior-Driven Development using Cucumber and Capybara
-microsoft_qualifications:
-  - Experience building ASP MVC web applications
+  - Experience with Rails Behavior-Driven Development using Cucumber, Capybara, and Selenium
+  - Experience with Heroku deployment and Software As A Service design
+microsoft_experience:
+  - Experience building ASP MVC and ASP Web Forms web applications
   - Experience with building Windows Presentation Foundation applications 
-  - Powershell, and Wix
-other_qualifications:
+  - Experience building and configuring Windows services
+  - Experience writing PowerShell scripts
+  - Experience with building Wix installers
+other_experience:
   - Experience with PHP LAMP stack websites
   - Knowledge of basic audio and video programming
   - Knowledge of basic network programming
   - Knowldege of basic Linux and Windows system administration
-  - Some knowledge of Puppet scripting
+  - Knowledge of basic bash and puppet scripting

@@ -1,7 +1,8 @@
 class Comment < ActiveRecord::Base
   belongs_to :post
-  validates :author, presence: true
-  validates :body, presence: true
+  validates :author, :presence => true, length: {:maximum => 40}
+  validates :author_website, :length => {:maximum => 40}
+  validates :body, :presence => true, :length => {:maximum => 400}
 
   before_create :set_posted_datetime
 

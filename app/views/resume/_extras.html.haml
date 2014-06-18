@@ -1,0 +1,5 @@
+- @extras.each do |name, extras|
+  %p.resume_category_title= name
+  %ul.resume_category_list
+    -extras.each do |extra|
+      %li= extra

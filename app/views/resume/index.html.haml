@@ -1,1 +1,19 @@
-My Resume
+%h2.resume_title My Current Resume
+
+.panel-group{id: 'accordion'}
+  .panel.panel-default
+    = render :partial => 'accordion_panel', :locals => {panel_title: 'Programming Experience', 
+      panel_number: 1,
+      panel_content: render(:partial => 'programming_experience')}
+
+    = render :partial => 'accordion_panel', :locals => {panel_title: 'Work Experience',
+      panel_number: 2,
+      panel_content: render(:partial => 'employment_history')}
+
+    = render :partial => 'accordion_panel', :locals => {panel_title: 'Education',
+      panel_number: 3,
+      panel_content: render(:partial => 'education')}
+
+    = render :partial => 'accordion_panel', :locals => {panel_title: 'Extra Stuff',
+      panel_number: 4,
+      panel_content: render(:partial => 'extras')}
