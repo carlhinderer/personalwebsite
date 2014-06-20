@@ -14,14 +14,14 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-06-18T11:20:01-04:00">2014-06-18T11:20:01-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-06-20T13:04:29-04:00">2014-06-20T13:04:29-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">95.59%</span></span>
+    (<span class="covered_percent"><span class="green">95.6%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>47</b> files in total.
-    <b>499</b> relevant lines. 
-    <span class="green"><b>477</b> lines covered</span> and
+    <b>500</b> relevant lines. 
+    <span class="green"><b>478</b> lines covered</span> and
     <span class="red"><b>22</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -143,7 +143,7 @@
       <tr>
         <td class="strong"><a href="#7715c87b8e74dfc5316b0f28977253ece3cf30b1" class="src_link" title="app/helpers/markdown_helper.rb">app/helpers/markdown_helper.rb</a></td>
         <td class="red strong">60.0 %</td>
-        <td>16</td>
+        <td>17</td>
         <td>10</td>
         <td>6</td>
         <td>4</td>
@@ -284,8 +284,8 @@
         <td class="strong"><a href="#b8c1daf2a11cbd63b0f5cff079a0ef8a6b3366e2" class="src_link" title="config/initializers/devise.rb">config/initializers/devise.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>256</td>
-        <td>11</td>
-        <td>11</td>
+        <td>12</td>
+        <td>12</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -1729,64 +1729,70 @@
         <li class="missed" data-hits="0" data-linenumber="6">
           
           
-          <code class="ruby">    options = {fenced_code_blocks: true, disable_indented_code_blocks: true}</code>
+          <code class="ruby">    options = {fenced_code_blocks: true, disable_indented_code_blocks: true,</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
-          <code class="ruby">    redcarpet = Redcarpet::Markdown.new(PygmentizeHTML, options)</code>
+          <code class="ruby">      no_intra_emphasis: true}</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="8">
           
           
-          <code class="ruby">    redcarpet.render(text).html_safe</code>
+          <code class="ruby">    redcarpet = Redcarpet::Markdown.new(PygmentizeHTML, options)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="missed" data-hits="0" data-linenumber="9">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    redcarpet.render(text).html_safe</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="11">
           
-          <code class="ruby">  class PygmentizeHTML &lt; Redcarpet::Render::HTML</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
+          <code class="ruby">  class PygmentizeHTML &lt; Redcarpet::Render::HTML</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
           <code class="ruby">    def block_code(code, language)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="13">
+        <li class="missed" data-hits="0" data-linenumber="14">
           
           
           <code class="ruby">      Pygmentize.process(code, language)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">end</code>
@@ -3109,8 +3115,8 @@
     <h3>config/initializers/devise.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>11</b> relevant lines. 
-      <span class="green"><b>11</b> lines covered</span> and
+      <b>12</b> relevant lines. 
+      <span class="green"><b>12</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -3154,16 +3160,16 @@
           <code class="ruby">  # confirmation, reset password and unlock tokens in the database.</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  # config.secret_key = '4944045792f6b3fb4761cb0fa15b6ff835f91cb936fc5786752055e9d79ae8190115f9daf13c071337d9412ed493a9552f523baa48a0b7cb12541fe44f493081'</code>
+          <code class="ruby">  config.secret_key = ENV[&quot;DEVISE_SECRET_KEY&quot;]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
@@ -3193,7 +3199,7 @@
         <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
-          <code class="ruby">  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'</code>
+          <code class="ruby">  config.mailer_sender = &quot;'CarlHinderer.net' &lt;no-reply@carlhinderer.net&gt;&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
@@ -4945,7 +4951,7 @@
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">Personalwebsite::Application.config.secret_key_base = 'b1059f014cdf81c57d14423a6a817f86fd763370b43a74d13bb7a1434639c95ee5c73afbfb26f51fd7ade3ba56951616f6299d344b3c84648a8e72730fe29016'</code>
+          <code class="ruby">Personalwebsite::Application.config.secret_key_base = ENV[&quot;SECRET_KEY&quot;]</code>
         </li>
       
     </ol>
