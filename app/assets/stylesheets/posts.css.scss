@@ -1,3 +1,5 @@
+$teal_font_color: #009999;
+
 #posts {
   padding-top: 100px;
 }
@@ -7,7 +9,7 @@
 }
 
 .post_summary_title {
-  font-size: 3em;
+  font-size: 2.6em;
   font-weight: bold;
   margin: 10px 0px;
   font-family: 'Noto Serif', serif; 
@@ -19,9 +21,9 @@
 }
 
 .post-summary-separator {
-  color: #009999;
-  border-color: #009999;
-  background-color: #009999;
+  color: $teal-font-color;
+  border-color: $teal-font-color;
+  background-color: $teal-font-color;
   margin: 40px 0px;
 }
 
@@ -33,19 +35,19 @@
     color: #ad1d28;
   }
   .title {
-    font-size: 3.5em;
+    font-size: 2.6em;
     font-weight: bold;
     margin: 0px 0px 40px;
-    color: #009999;
+    color: $teal-font-color;
   }
   .body {
     font-size: 1.3em;
     p { margin: 25px 0px; }
     pre { font-size: 0.65em; }
+    h3 { 
+      color: $teal-font-color;
+      margin: 60px 0px 0px;
+    }
     .highlight { margin: 20px 0px 40px; }
   }
 }
-
-
-
-

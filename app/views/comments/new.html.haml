@@ -4,7 +4,6 @@
 
   - unless @comment.errors.empty?
     #warning
-      Errors prevented this post from being created.
       %ul
         - @comment.errors.full_messages.each do |error|
           %li= error
