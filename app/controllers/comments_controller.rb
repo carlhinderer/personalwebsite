@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new comment_params
     if (@post.comments << @comment) 
-      redirect_to post_path(@post.id)
+      redirect_to post_path(@post.slug)
     else
       render :action => 'new'
     end
@@ -20,7 +20,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find params[:id]
     @comment.destroy
     flash[:notice] = "Comment successfully destroyed."
-    redirect_to post_path(@post.id)
+    redirect_to post_path(@post.slug)
   end
 
 

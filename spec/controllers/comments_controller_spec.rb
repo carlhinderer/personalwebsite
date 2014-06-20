@@ -23,7 +23,8 @@ describe CommentsController do
   describe "post #create" do
     context "with valid attributes" do
       before :each do
-	@attrs = FactoryGirl.build(:comment).attributes.symbolize_keys
+	@comment = FactoryGirl.build(:comment)
+	@attrs = @comment.attributes.symbolize_keys
       end
 
       it "creates a new comment" do
@@ -34,7 +35,7 @@ describe CommentsController do
 
       it "redirects to the commented post" do
         post :create, :post_id => @attrs[:post_id], :comment => @attrs
-	expect(response).to redirect_to post_path(@attrs[:post_id])
+	expect(response).to redirect_to post_path(@comment.post.slug)
       end
     end
 
@@ -75,7 +76,7 @@ describe CommentsController do
 
     it "redirects to commented-on post" do
       delete :destroy, :post_id => @comment[:post_id], :id => @comment
-      expect(response).to redirect_to post_url(@comment[:post_id])
+      expect(response).to redirect_to post_url(@comment.post.slug)
     end
   end
 end
