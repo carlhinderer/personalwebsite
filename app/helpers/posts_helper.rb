@@ -9,6 +9,6 @@ module PostsHelper
   end
 
   def truncated_post_body(body)
-    truncate(body.split(/```|~~~|\r|\n/).first, :length => 300)
+    truncate(body.split(/```|~~~|\r|\n/).first, :length => 400)
   end
 end
