@@ -13,7 +13,8 @@ rails_experience:
   - Experience with Heroku deployment and Software As A Service design
 microsoft_experience:
   - Experience building ASP MVC and ASP Web Forms web applications
-  - Experience with building Windows Presentation Foundation applications 
+  - Experience with MsTest, NUnit, and Test-Driven Development on the .NET platform
+  - Experience building Windows Presentation Foundation and Windows Forms applications 
   - Experience building and configuring Windows services
   - Experience writing PowerShell scripts
   - Experience with building Wix installers
