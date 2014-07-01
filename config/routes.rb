@@ -3,8 +3,10 @@ Personalwebsite::Application.routes.draw do
   root 'posts#index'
   get 'manage' => 'manage#index' 
 
-  get 'posts/category/:category_or_tag' => 'posts#index'
-  get 'posts/tag/:category_or_tag' => 'posts#index'
+  get 'posts/category/:category' => 'posts#index', 
+    constraints: { category: /programming|personal/ }
+  get 'posts/tag/:tag' => 'posts#index'
+
   get 'resume' => 'resume#index'
   get 'contact' => 'contact#index'
 

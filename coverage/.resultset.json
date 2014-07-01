@@ -550,8 +550,10 @@
         1,
         1,
         null,
+        null,
         1,
         1,
+        null,
         1,
         1,
         null,
@@ -1245,24 +1247,15 @@
         null,
         null
       ],
-      "/home/chinderer/Code/RailsProjects/personalwebsite/app/models/post.rb": [
+      "/home/chinderer/Code/RailsProjects/personalwebsite/spec/models/comment_spec.rb": [
         1,
-        1,
-        1,
-        1,
+        2,
+        2,
         null,
-        1,
-        1,
-        1,
-        1,
+        2,
         null,
-        1,
-        1,
-        null
-      ],
-      "/home/chinderer/Code/RailsProjects/personalwebsite/app/models/category.rb": [
-        1,
-        1,
+        2,
+        2,
         null
       ],
       "/home/chinderer/Code/RailsProjects/personalwebsite/app/models/comment.rb": [
@@ -1280,8 +1273,89 @@
         null,
         null
       ],
+      "/home/chinderer/Code/RailsProjects/personalwebsite/spec/models/post_spec.rb": [
+        1,
+        2,
+        2,
+        2,
+        2,
+        null
+      ],
+      "/home/chinderer/Code/RailsProjects/personalwebsite/app/models/post.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/home/chinderer/Code/RailsProjects/personalwebsite/spec/models/tag_spec.rb": [
+        1,
+        2,
+        2,
+        null
+      ],
       "/home/chinderer/Code/RailsProjects/personalwebsite/app/models/tag.rb": [
         1,
+        1,
+        1,
+        null
+      ],
+      "/home/chinderer/Code/RailsProjects/personalwebsite/spec/routing/post_routing_spec.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/chinderer/Code/RailsProjects/personalwebsite/app/models/category.rb": [
         1,
         1,
         null
@@ -1317,6 +1391,6 @@
         null
       ]
     },
-    "timestamp": 1403288961
+    "timestamp": 1404187025
   }
 }
