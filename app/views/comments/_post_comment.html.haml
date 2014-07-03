@@ -1,5 +1,5 @@
 %div[comment]
-  .author= comment_author_with_website(comment)
+  .author= "#{comment.author} (#{comment.author_website})"
   .body= comment.body
   .time= "Posted at #{comment.posted}"
   -if admin_signed_in?

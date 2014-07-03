@@ -18,6 +18,7 @@ gem 'devise'
 
 # Use haml for templating
 gem 'haml'
+gem 'haml-rails'
 
 # Assets
 gem 'sass-rails', '~> 4.0.0'
@@ -80,7 +81,7 @@ gem 'railroady', :groups => [:development, :test]
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
-gem 'unicorn', :group => :production
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
