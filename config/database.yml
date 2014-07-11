@@ -18,7 +18,7 @@ development:
 test: &test
   adapter: postgresql
   encoding: unicode
-  database: personalwebsite-development
+  database: personalwebsite-test
   host: localhost
   pool: 5
   username: postgres
