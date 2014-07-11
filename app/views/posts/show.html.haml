@@ -3,4 +3,4 @@
   .date_tags Posted #{formatted_post_date(@post.posted)} on #{formatted_tag_list(@post.tags)} 
   .title= @post.title
   .body= find_and_preserve markdown_with_pygmentize(@post.body)
-  = render :partial => '/comments/post_comments'
+  = render :partial => 'disqus_thread'
