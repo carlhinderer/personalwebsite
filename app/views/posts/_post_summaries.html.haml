@@ -1,5 +1,6 @@
 #posts
   -if @posts.any?
     = render :partial => 'post_summary', :collection => @posts, :as => :post
+    = paginate @posts
   -else
     %p= 'Posts coming soon.'

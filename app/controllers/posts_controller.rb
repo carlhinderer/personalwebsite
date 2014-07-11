@@ -3,14 +3,15 @@ class PostsController < ApplicationController
 
   def index
     if params[:category] == 'programming'
-      @posts = Post.joins(:category).where(:categories => {:name => 'Programming'}).order(created_at: :desc)
+      @posts = Post.joins(:category).where(:categories => {:name => 'Programming'})
     elsif params[:category] == 'personal'
-      @posts = Post.joins(:category).where(:categories => {:name => 'Personal'}).order(created_at: :desc)
+      @posts = Post.joins(:category).where(:categories => {:name => 'Personal'})
     elsif !params[:tag]
-      @posts = Post.order(created_at: :desc)
+      @posts = Post.all
     else
-      @posts = Post.joins(:tags).where(:tags => {:name => params[:tag]}).order(created_at: :desc)
+      @posts = Post.joins(:tags).where(:tags => {:name => params[:tag]})
     end
+    @posts = @posts.order(created_at: :desc).page params[:page]
   end
 
   def show

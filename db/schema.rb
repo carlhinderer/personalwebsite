@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140612173155) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "admins", force: true do |t|
     t.string   "email",              default: "", null: false
     t.string   "encrypted_password", default: "", null: false
@@ -20,7 +23,7 @@ ActiveRecord::Schema.define(version: 20140612173155) do
     t.datetime "updated_at"
   end
 
-  add_index "admins", ["email"], name: "index_admins_on_email", unique: true
+  add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -28,7 +31,7 @@ ActiveRecord::Schema.define(version: 20140612173155) do
     t.datetime "updated_at"
   end
 
-  add_index "categories", ["name"], name: "index_categories_on_name"
+  add_index "categories", ["name"], name: "index_categories_on_name", using: :btree
 
   create_table "comments", force: true do |t|
     t.integer  "post_id"
@@ -40,7 +43,7 @@ ActiveRecord::Schema.define(version: 20140612173155) do
     t.datetime "updated_at"
   end
 
-  add_index "comments", ["post_id"], name: "index_comments_on_post_id"
+  add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
 
   create_table "posts", force: true do |t|
     t.integer  "category_id"
@@ -52,15 +55,15 @@ ActiveRecord::Schema.define(version: 20140612173155) do
     t.string   "slug"
   end
 
-  add_index "posts", ["slug"], name: "index_posts_on_slug", unique: true
-  add_index "posts", ["title"], name: "index_posts_on_title"
+  add_index "posts", ["slug"], name: "index_posts_on_slug", unique: true, using: :btree
+  add_index "posts", ["title"], name: "index_posts_on_title", using: :btree
 
   create_table "posts_tags", id: false, force: true do |t|
     t.integer "post_id", null: false
     t.integer "tag_id",  null: false
   end
 
-  add_index "posts_tags", ["post_id", "tag_id"], name: "index_posts_tags_on_post_id_and_tag_id", unique: true
+  add_index "posts_tags", ["post_id", "tag_id"], name: "index_posts_tags_on_post_id_and_tag_id", unique: true, using: :btree
 
   create_table "tags", force: true do |t|
     t.string   "name"
@@ -68,6 +71,6 @@ ActiveRecord::Schema.define(version: 20140612173155) do
     t.datetime "updated_at"
   end
 
-  add_index "tags", ["name"], name: "index_tags_on_name"
+  add_index "tags", ["name"], name: "index_tags_on_name", using: :btree
 
 end
