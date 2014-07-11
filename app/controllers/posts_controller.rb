@@ -2,14 +2,12 @@ class PostsController < ApplicationController
   before_action :authenticate_admin!, :only => [:new, :create, :edit, :update, :destroy]
 
   def index
-    if params[:category] == 'programming'
-      @posts = Post.joins(:category).where(:categories => {:name => 'Programming'})
-    elsif params[:category] == 'personal'
-      @posts = Post.joins(:category).where(:categories => {:name => 'Personal'})
-    elsif !params[:tag]
-      @posts = Post.all
+    if params[:category]
+      @posts = Category.find_by_name(params[:category].capitalize).posts
+    elsif params[:tag]
+      @posts = Tag.find_by_name(params[:tag]).posts
     else
-      @posts = Post.joins(:tags).where(:tags => {:name => params[:tag]})
+      @posts = Post.all
     end
     @posts = @posts.order(created_at: :desc).page params[:page]
   end
